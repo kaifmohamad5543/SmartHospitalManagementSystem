@@ -1,7 +1,6 @@
 // ============================
 // model/User.java
 // ============================
-
 package model;
 
 // Abstract parent class representing all users

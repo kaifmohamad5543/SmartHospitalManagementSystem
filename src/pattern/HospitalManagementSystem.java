@@ -14,18 +14,14 @@ import model.Appointment;
 // Singleton class
 public class HospitalManagementSystem {
 
-    // Static instance
+    // Static Singleton instance
     private static HospitalManagementSystem instance;
 
-    // Appointment list
-    private List<Appointment> appointments = new ArrayList<>();
 
-    // Observer list
-    private List<Observer> observers = new ArrayList<>();
+
 
     // Private constructor
     private HospitalManagementSystem() {
-
     }
 
     // Singleton getter method
@@ -41,10 +37,10 @@ public class HospitalManagementSystem {
 
     // Adding observer
     public void addObserver(Observer observer) {
-
         observers.add(observer);
     }
-
+    // Appointment list
+    private List<Appointment> appointments = new ArrayList<>();
     // Adding appointment
     public void addAppointment(Appointment appointment) {
 
@@ -53,7 +49,8 @@ public class HospitalManagementSystem {
         // Notify all observers
         notifyObservers("New appointment scheduled.");
     }
-
+    // Observer list
+    private List<Observer> observers = new ArrayList<>();
     // Notification method
     public void notifyObservers(String message) {
 
